@@ -8,7 +8,7 @@ Minimaldb is tested with Python 3.7
 ## Installation
 From PyPi:
 ```
-$ pip install pynamodb
+$ pip install minimaldb
 ```
 
 ## Example Code

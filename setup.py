@@ -1,11 +1,12 @@
-from setuptools import setup
+import setuptools
 
 
 with open("README.md", "r") as stream:
     long_description = stream.read()
 
-setup(name='minimaldb',
-    version='1.0',
+setuptools.setup(
+    name='minimaldb',
+    version='1.1',
     description='Minimalistic document oriented database.',
     long_description=long_description,
     long_description_content_type="text/markdown",
