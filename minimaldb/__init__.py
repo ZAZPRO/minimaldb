@@ -34,6 +34,15 @@ class MinimalDB(object):
             print(f"Problem to save the db with path: {self.path}")
             return False
 
+    def __update_db(self):
+        try:
+            with open(self.path, "w") as stream:
+                yaml.dump(self.db, stream)
+                return True
+        except Exception as e:
+            print(f"Problem to save the db with path: {self.path}")
+            return False
+
     def set(self, key, value):
         """
         Sets a value in the database
@@ -75,3 +84,15 @@ class MinimalDB(object):
         del self.db[key]
         self.__dump_db()
         return True
+
+    def update(self, key, value):
+        if self.get(key):
+            try:
+                self.db[str(key)] = value
+                self.__update_db()
+                return True
+            except Exception as e:
+                print(f"Error while saving values: {e}")
+            return False
+        else:
+            return False
