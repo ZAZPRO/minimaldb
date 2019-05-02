@@ -15,7 +15,6 @@ $ pip install minimaldb
 ```python
 from minimaldb import MinimalDB
 
-
 db = MinimalDB("database_name.db")
 
 # Setting a value
@@ -25,4 +24,7 @@ db.set("key_name", value)
 db.get("key_name")
 
 # Deleting a value
-db.delete("kay_name")
+db.delete("key_name")
+
+# Updating a value
+db.update("key_name", value)

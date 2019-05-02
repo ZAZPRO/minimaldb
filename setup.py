@@ -6,7 +6,7 @@ with open("README.md", "r") as stream:
 
 setuptools.setup(
     name='minimaldb',
-    version='1.1',
+    version='1.2',
     description='Minimalistic document oriented database.',
     long_description=long_description,
     long_description_content_type="text/markdown",
